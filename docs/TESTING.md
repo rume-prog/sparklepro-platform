@@ -32,7 +32,8 @@
 ## Test Environment
 
 - Node.js and npm installed
-- Vitest as the test runner (not yet set up)
+- Vitest as the test runner with jsdom environment
+- React Testing Library configured
 - Browser DevTools for responsive checks
 
 ## Planned Test Cases
@@ -42,13 +43,13 @@
 | TC-1 | Home page loads and displays hero section | No console errors, hero visible | Not run |
 | TC-2 | Services page displays all service offerings | Services visible with descriptions | Not run |
 | TC-3 | About page loads with company information | Content displays correctly | Not run |
-| TC-4 | Contact page renders contact form | Form fields visible and accessible | Not run |
+| TC-4 | Contact page renders contact information | Contact info visible and accessible | Not run |
 | TC-5 | Navigation between pages works with React Router | Pages load without errors | Not run |
-| TC-6 | Booking form opens WhatsApp with pre-filled message | WhatsApp opens with correct message | Not run |
+| TC-6 | Booking form opens WhatsApp with pre-filled message | WhatsApp opens with correct message | Not implemented |
 | TC-7 | Responsive design on desktop (1920x1080) | Layout fits, no horizontal scroll | Not run |
 | TC-8 | Responsive design on tablet (768x1024) | Layout adapts, content readable | Not run |
 | TC-9 | Responsive design on mobile (375x667) | Touch targets adequate, no horizontal scroll | Not run |
-| TC-10 | Component unit tests (Button, Navigation, etc.) | All tests pass, >80% coverage | Not run |
+| TC-10 | Component unit tests (Button, Navigation, etc.) | Basic tests for key components | Not run |
 | TC-11 | Cross-browser compatibility (Chrome, Firefox, Edge) | Features work consistently | Not run |
 
 ## Test Results
