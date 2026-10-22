@@ -108,11 +108,13 @@ function ContactPage() {
                   padding: 'var(--spacing-md) var(--spacing-xl)',
                   borderRadius: 'var(--radius-md)',
                   fontSize: 'var(--font-size-lg)',
-                  fontWeight: 'bold',
+                  fontWeight: 700,
                   textDecoration: 'none',
                   marginBottom: 'var(--spacing-md)',
                   transition: 'background-color var(--transition-fast)'
                 }}
+                onMouseEnter={(e) => e.target.style.backgroundColor = '#20BD5A'}
+                onMouseLeave={(e) => e.target.style.backgroundColor = '#25D366'}
               >
                 Contact via WhatsApp
               </a>
@@ -144,14 +146,17 @@ function ContactPage() {
             href="tel:[PHONE NUMBER]"
             style={{
               display: 'inline-block',
-              backgroundColor: 'white',
+              backgroundColor: 'var(--color-secondary)',
               color: 'var(--color-primary)',
               padding: 'var(--spacing-md) var(--spacing-xl)',
               borderRadius: 'var(--radius-md)',
               fontSize: 'var(--font-size-lg)',
-              fontWeight: 'bold',
-              textDecoration: 'none'
+              fontWeight: 700,
+              textDecoration: 'none',
+              transition: 'background-color var(--transition-fast)'
             }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--color-secondary-dark)'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'var(--color-secondary)'}
           >
             Call [PHONE NUMBER]
           </a>

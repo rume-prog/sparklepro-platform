@@ -47,22 +47,34 @@ function Footer() {
               margin: 0
             }}>
               <li style={{ marginBottom: 'var(--spacing-sm)' }}>
-                <Link to="/" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none' }}>
+                <Link to="/" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none', transition: 'color var(--transition-fast)' }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-secondary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--color-text-lighter)'}
+                >
                   Home
                 </Link>
               </li>
               <li style={{ marginBottom: 'var(--spacing-sm)' }}>
-                <Link to="/services" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none' }}>
+                <Link to="/services" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none', transition: 'color var(--transition-fast)' }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-secondary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--color-text-lighter)'}
+                >
                   Services
                 </Link>
               </li>
               <li style={{ marginBottom: 'var(--spacing-sm)' }}>
-                <Link to="/about" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none' }}>
+                <Link to="/about" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none', transition: 'color var(--transition-fast)' }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-secondary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--color-text-lighter)'}
+                >
                   About
                 </Link>
               </li>
               <li style={{ marginBottom: 'var(--spacing-sm)' }}>
-                <Link to="/contact" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none' }}>
+                <Link to="/contact" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none', transition: 'color var(--transition-fast)' }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-secondary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--color-text-lighter)'}
+                >
                   Contact
                 </Link>
               </li>

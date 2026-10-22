@@ -18,10 +18,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Shared Footer component with contact information (built, not yet verified)
 - Placeholders for phone numbers, email, address, and prices (built, not yet verified)
 - Mobile-first responsive design with plain CSS (built, not yet verified)
+- Google Fonts: Bricolage Grotesque for headings, DM Sans for body text (built, not yet verified)
+- Mobile menu button with keyboard accessibility and auto-close on link tap (built, not yet verified)
+- Inline SVG decorative graphics in hero section (built, not yet verified)
+- Focus outline CSS variables for accessibility (built, not yet verified)
 
 ### Changed
 - Replaced Vite default demo content with SparklePro structure (built, not yet verified)
 - Removed demo assets (logos, hero image) (built, not yet verified)
+- Updated color palette to deep teal-green (#0F3D3E), warm off-white (#FAF9F6), citrus-yellow accent (#D4A017), and soft grey borders (built, not yet verified)
+- Enhanced hero section with stronger heading, shorter text, and dual buttons (built, not yet verified)
+- Removed unverifiable promises from content (built, not yet verified)
+- Updated all pages to use new color scheme with hover states (built, not yet verified)
 
 ## [0.0.1] - 2026-10-22
 

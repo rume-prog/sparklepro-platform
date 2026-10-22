@@ -146,14 +146,17 @@ function ServicesPage() {
             href="tel:[PHONE NUMBER]"
             style={{
               display: 'inline-block',
-              backgroundColor: 'white',
+              backgroundColor: 'var(--color-secondary)',
               color: 'var(--color-primary)',
               padding: 'var(--spacing-md) var(--spacing-xl)',
               borderRadius: 'var(--radius-md)',
               fontSize: 'var(--font-size-lg)',
-              fontWeight: 'bold',
-              textDecoration: 'none'
+              fontWeight: 700,
+              textDecoration: 'none',
+              transition: 'background-color var(--transition-fast)'
             }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--color-secondary-dark)'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'var(--color-secondary)'}
           >
             Call [PHONE NUMBER]
           </a>

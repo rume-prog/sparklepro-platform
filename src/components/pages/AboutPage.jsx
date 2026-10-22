@@ -88,19 +88,19 @@ function AboutPage() {
           }}>
             <div>
               <h3 style={{ color: 'var(--color-primary)' }}>Integrity</h3>
-              <p>We believe in honest communication and transparent pricing. No hidden fees, no surprises.</p>
+              <p>We believe in honest communication and transparent pricing.</p>
             </div>
             <div>
               <h3 style={{ color: 'var(--color-primary)' }}>Quality</h3>
-              <p>We never compromise on quality. Every cleaning job is done to the highest standards.</p>
+              <p>Every cleaning job is done to high standards.</p>
             </div>
             <div>
               <h3 style={{ color: 'var(--color-primary)' }}>Reliability</h3>
-              <p>We show up on time and deliver what we promise. Your satisfaction is our priority.</p>
+              <p>We aim to deliver consistent service.</p>
             </div>
             <div>
               <h3 style={{ color: 'var(--color-primary)' }}>Respect</h3>
-              <p>We treat your property and belongings with the utmost care and respect.</p>
+              <p>We treat your property and belongings with care.</p>
             </div>
           </div>
         </div>

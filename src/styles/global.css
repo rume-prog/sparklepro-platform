@@ -2,26 +2,26 @@
 
 :root {
   /* Colors */
-  --color-primary: #0066cc;
-  --color-primary-dark: #004c99;
-  --color-primary-light: #3385d6;
-  --color-secondary: #00cc66;
-  --color-secondary-dark: #00994d;
-  --color-accent: #ff9900;
-  --color-text: #333333;
-  --color-text-light: #666666;
-  --color-text-lighter: #999999;
-  --color-background: #ffffff;
-  --color-background-alt: #f5f5f5;
-  --color-border: #e0e0e0;
-  --color-border-dark: #cccccc;
+  --color-primary: #0F3D3E;
+  --color-primary-dark: #0A2E2F;
+  --color-primary-light: #1A5A5B;
+  --color-secondary: #D4A017;
+  --color-secondary-dark: #B8860B;
+  --color-accent: #FFB347;
+  --color-text: #2D2D2D;
+  --color-text-light: #5A5A5A;
+  --color-text-lighter: #8A8A8A;
+  --color-background: #FAF9F6;
+  --color-background-alt: #F5F3EF;
+  --color-border: #D4D4D4;
+  --color-border-dark: #B0B0B0;
   --color-success: #28a745;
   --color-error: #dc3545;
   --color-warning: #ffc107;
 
   /* Fonts */
-  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-family-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-base: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-heading: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 
   /* Font sizes */
   --font-size-xs: 0.75rem;
@@ -33,6 +33,7 @@
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
 
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -68,6 +69,10 @@
   --transition-fast: 150ms ease-in-out;
   --transition-base: 200ms ease-in-out;
   --transition-slow: 300ms ease-in-out;
+
+  /* Focus */
+  --focus-outline: 3px solid var(--color-secondary);
+  --focus-offset: 2px;
 }
 
 /* Reset and base styles */
@@ -92,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--spacing-md);
 }
 
-h1 { font-size: var(--font-size-5xl); }
+h1 { font-size: var(--font-size-6xl); }
 h2 { font-size: var(--font-size-4xl); }
 h3 { font-size: var(--font-size-3xl); }
 h4 { font-size: var(--font-size-2xl); }
@@ -110,12 +115,22 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-primary-light);
 }
 
 button {
   font-family: inherit;
   cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
 }
 
 img {
@@ -139,11 +154,11 @@ img {
 
 /* Mobile-first responsive utilities */
 @media (min-width: 768px) {
-  h1 { font-size: var(--font-size-5xl); }
+  h1 { font-size: var(--font-size-6xl); }
   h2 { font-size: var(--font-size-4xl); }
 }
 
 @media (min-width: 1024px) {
-  h1 { font-size: var(--font-size-5xl); }
+  h1 { font-size: var(--font-size-6xl); }
   h2 { font-size: var(--font-size-4xl); }
 }
