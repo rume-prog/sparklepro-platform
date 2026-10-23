@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- WhatsApp booking request form on Contact page (built, not yet verified)
+- Message-building utility function in src/utils/whatsapp.js (built, not yet verified)
+- Form validation with plain-language error messages (built, not yet verified)
+- Accessibility features: ARIA labels, keyboard navigation, error descriptions (built, not yet verified)
+- Privacy notice under booking form about data not being stored (built, not yet verified)
+- Safety check: form disabled when WhatsApp number is placeholder (built, not yet verified)
+- Unit tests for buildWhatsAppMessage function (4 tests, all passed)
+- Unit tests for ContactPage booking form (5 tests, all passed)
 - Site configuration system in src/config/site.js (built, not yet verified)
 - CSS classes for all repeated inline styles and hover effects (built, not yet verified)
 - Documentation: docs/CLIENT_CHECKLIST.md (built, not yet verified)
@@ -17,12 +25,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configuration section in docs/ARCHITECTURE.md (built, not yet verified)
 
 ### Changed
+- Contact page now includes booking form when bookingForm feature toggle is enabled (built, not yet verified)
 - Moved all business text from components to src/config/site.js (built, not yet verified)
 - Replaced inline styles with CSS classes in global.css (built, not yet verified)
 - Replaced onMouseEnter/onMouseLeave hover code with CSS :hover pseudo-classes (built, not yet verified)
 - Components now read all content from config instead of hardcoded values (built, not yet verified)
 - Navigation uses CSS classes instead of inline styles (built, not yet verified)
 - Footer links use CSS hover instead of JavaScript hover (built, not yet verified)
+- Contact page phone and WhatsApp links now disabled when placeholder values are used (built, not yet verified)
 
 ### Added
 - React + Vite project with JavaScript (built, not yet verified)
