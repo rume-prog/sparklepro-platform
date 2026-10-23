@@ -1,12 +1,10 @@
 import '../../styles/global.css';
+import { siteConfig } from '../../config/site';
 
 function ContactPage() {
   return (
     <div>
-      <section style={{
-        padding: 'var(--spacing-3xl) 0',
-        backgroundColor: 'var(--color-background-alt)'
-      }}>
+      <section className="section-alt">
         <div className="container">
           <h1 style={{
             textAlign: 'center',
@@ -21,20 +19,14 @@ function ContactPage() {
             marginLeft: 'auto',
             marginRight: 'auto'
           }}>
-            Get in touch with SparklePro for a free quote or to schedule your cleaning service.
+            Get in touch with {siteConfig.businessName} for a free quote or to schedule your cleaning service.
           </p>
         </div>
       </section>
 
-      <section style={{
-        padding: 'var(--spacing-3xl) 0'
-      }}>
+      <section className="section">
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: 'var(--spacing-2xl)'
-          }}>
+          <div className="grid-auto-fit-2xl">
             <div>
               <h2 style={{ color: 'var(--color-primary)', marginBottom: 'var(--spacing-xl)' }}>
                 Get in Touch
@@ -44,8 +36,8 @@ function ContactPage() {
                   Phone
                 </h3>
                 <p style={{ fontSize: 'var(--font-size-lg)' }}>
-                  <a href="tel:[PHONE NUMBER]" style={{ color: 'var(--color-primary)' }}>
-                    [PHONE NUMBER]
+                  <a href={`tel:${siteConfig.contact.phone}`} style={{ color: 'var(--color-primary)' }}>
+                    {siteConfig.contact.phone}
                   </a>
                 </p>
               </div>
@@ -54,8 +46,8 @@ function ContactPage() {
                   Email
                 </h3>
                 <p style={{ fontSize: 'var(--font-size-lg)' }}>
-                  <a href="mailto:[EMAIL ADDRESS]" style={{ color: 'var(--color-primary)' }}>
-                    [EMAIL ADDRESS]
+                  <a href={`mailto:${siteConfig.contact.email}`} style={{ color: 'var(--color-primary)' }}>
+                    {siteConfig.contact.email}
                   </a>
                 </p>
               </div>
@@ -64,10 +56,10 @@ function ContactPage() {
                   Address
                 </h3>
                 <p style={{ fontSize: 'var(--font-size-lg)' }}>
-                  [ADDRESS]
+                  {siteConfig.contact.address}
                 </p>
                 <p style={{ fontSize: 'var(--font-size-base)', color: 'var(--color-text-light)' }}>
-                  Nairobi, Kenya
+                  {siteConfig.contact.city}
                 </p>
               </div>
               <div>
@@ -75,22 +67,18 @@ function ContactPage() {
                   Business Hours
                 </h3>
                 <p style={{ fontSize: 'var(--font-size-base)' }}>
-                  Monday - Friday: [BUSINESS HOURS]
+                  Monday - Friday: {siteConfig.contact.hours.weekday}
                 </p>
                 <p style={{ fontSize: 'var(--font-size-base)' }}>
-                  Saturday: [BUSINESS HOURS]
+                  Saturday: {siteConfig.contact.hours.saturday}
                 </p>
                 <p style={{ fontSize: 'var(--font-size-base)' }}>
-                  Sunday: Closed
+                  Sunday: {siteConfig.contact.hours.sunday}
                 </p>
               </div>
             </div>
 
-            <div style={{
-              backgroundColor: 'var(--color-background-alt)',
-              padding: 'var(--spacing-2xl)',
-              borderRadius: 'var(--radius-lg)'
-            }}>
+            <div className="quick-contact-box">
               <h2 style={{ color: 'var(--color-primary)', marginBottom: 'var(--spacing-xl)' }}>
                 Quick Contact
               </h2>
@@ -98,42 +86,25 @@ function ContactPage() {
                 For fastest response, call us directly or send us a message via WhatsApp.
               </p>
               <a
-                href="https://wa.me/[PHONE NUMBER]"
+                href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  display: 'inline-block',
-                  backgroundColor: '#25D366',
-                  color: 'white',
-                  padding: 'var(--spacing-md) var(--spacing-xl)',
-                  borderRadius: 'var(--radius-md)',
-                  fontSize: 'var(--font-size-lg)',
-                  fontWeight: 700,
-                  textDecoration: 'none',
-                  marginBottom: 'var(--spacing-md)',
-                  transition: 'background-color var(--transition-fast)'
-                }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#20BD5A'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = '#25D366'}
+                className="btn-whatsapp"
+                style={{ marginBottom: 'var(--spacing-md)' }}
               >
                 Contact via WhatsApp
               </a>
               <p style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-light)' }}>
-                We typically respond within [RESPONSE TIME] during business hours.
+                We typically respond within {siteConfig.contact.responseTime} during business hours.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section style={{
-        backgroundColor: 'var(--color-primary)',
-        color: 'white',
-        padding: 'var(--spacing-3xl) 0',
-        textAlign: 'center'
-      }}>
+      <section className="section-primary">
         <div className="container">
-          <h2 style={{ color: 'white', marginBottom: 'var(--spacing-md)' }}>
+          <h2 className="section-title-white">
             Ready to Get Started?
           </h2>
           <p style={{
@@ -142,23 +113,8 @@ function ContactPage() {
           }}>
             Contact us today for a free, no-obligation quote for your cleaning needs.
           </p>
-          <a
-            href="tel:[PHONE NUMBER]"
-            style={{
-              display: 'inline-block',
-              backgroundColor: 'var(--color-secondary)',
-              color: 'var(--color-primary)',
-              padding: 'var(--spacing-md) var(--spacing-xl)',
-              borderRadius: 'var(--radius-md)',
-              fontSize: 'var(--font-size-lg)',
-              fontWeight: 700,
-              textDecoration: 'none',
-              transition: 'background-color var(--transition-fast)'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--color-secondary-dark)'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = 'var(--color-secondary)'}
-          >
-            Call [PHONE NUMBER]
+          <a href={`tel:${siteConfig.contact.phone}`} className="btn-primary">
+            Call {siteConfig.contact.phone}
           </a>
         </div>
       </section>

@@ -207,6 +207,44 @@ Sparklepro-platform/
 - Phase 2: Clear privacy policy
 - Phase 2: Secure data storage and transmission
 
+## Configuration System
+
+### Site Configuration
+
+All business-specific content is centralized in `src/config/site.js`. This single configuration file contains:
+
+- **Business identity**: name, tagline, description
+- **Services**: array of services with name, description, and price text
+- **Contact information**: phone, email, address, hours, WhatsApp number
+- **Geographic areas served**: list of service areas
+- **Feature toggles**: control which features are enabled (bookingForm, gallery, pricingTable)
+- **About page content**: story, mission, values, why choose us
+
+### How It Works
+
+1. Components import the config: `import { siteConfig } from '../../config/site'`
+2. Components read data from the config object instead of hardcoded text
+3. To customize for a new client, only `src/config/site.js` needs to be edited
+4. CSS variables in `src/styles/global.css` control the visual theme
+
+### Benefits
+
+- **Single source of truth**: All business content in one place
+- **Easy client onboarding**: Replace placeholders without touching component code
+- **Maintainability**: Layout components contain only structure, not content
+- **Reusability**: Same codebase can serve multiple clients with different configs
+- **Theme flexibility**: Change colors, fonts, spacing via CSS variables
+
+### Customization Workflow
+
+1. Copy the config file template
+2. Replace all `[BRACKETED]` placeholders with real client data
+3. Adjust CSS variables in `global.css` if custom branding is needed
+4. Enable/disable features in the `features` object
+5. Test and deploy
+
+See `docs/CLIENT_CHECKLIST.md` for a complete list of information needed from each client.
+
 ## Technology Choices
 
 ### Frontend Framework: React (Planned)

@@ -8,6 +8,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Site configuration system in src/config/site.js (built, not yet verified)
+- CSS classes for all repeated inline styles and hover effects (built, not yet verified)
+- Documentation: docs/CLIENT_CHECKLIST.md (built, not yet verified)
+- Feature toggles for bookingForm, gallery, and pricingTable (built, not yet verified)
+- Centralized business content in single config object (built, not yet verified)
+- Reusable CSS classes for buttons, cards, sections, and navigation (built, not yet verified)
+- Configuration section in docs/ARCHITECTURE.md (built, not yet verified)
+
+### Changed
+- Moved all business text from components to src/config/site.js (built, not yet verified)
+- Replaced inline styles with CSS classes in global.css (built, not yet verified)
+- Replaced onMouseEnter/onMouseLeave hover code with CSS :hover pseudo-classes (built, not yet verified)
+- Components now read all content from config instead of hardcoded values (built, not yet verified)
+- Navigation uses CSS classes instead of inline styles (built, not yet verified)
+- Footer links use CSS hover instead of JavaScript hover (built, not yet verified)
+
+### Added
 - React + Vite project with JavaScript (built, not yet verified)
 - React Router for navigation between pages (built, not yet verified)
 - Vitest with jsdom environment for testing (built, not yet verified)

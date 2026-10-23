@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../styles/global.css';
+import { siteConfig } from '../../config/site';
 
 function Footer() {
   return (
@@ -22,14 +23,14 @@ function Footer() {
               fontSize: 'var(--font-size-xl)',
               marginBottom: 'var(--spacing-md)'
             }}>
-              SparklePro
+              {siteConfig.businessName}
             </h3>
             <p style={{
               color: 'var(--color-text-lighter)',
               fontSize: 'var(--font-size-sm)',
               marginBottom: 0
             }}>
-              Professional cleaning services for homes and businesses in Nairobi.
+              {siteConfig.description} in {siteConfig.areasServed.join(', ')}.
             </p>
           </div>
 
@@ -47,34 +48,22 @@ function Footer() {
               margin: 0
             }}>
               <li style={{ marginBottom: 'var(--spacing-sm)' }}>
-                <Link to="/" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none', transition: 'color var(--transition-fast)' }}
-                onMouseEnter={(e) => e.target.style.color = 'var(--color-secondary)'}
-                onMouseLeave={(e) => e.target.style.color = 'var(--color-text-lighter)'}
-                >
+                <Link to="/" className="footer-link">
                   Home
                 </Link>
               </li>
               <li style={{ marginBottom: 'var(--spacing-sm)' }}>
-                <Link to="/services" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none', transition: 'color var(--transition-fast)' }}
-                onMouseEnter={(e) => e.target.style.color = 'var(--color-secondary)'}
-                onMouseLeave={(e) => e.target.style.color = 'var(--color-text-lighter)'}
-                >
+                <Link to="/services" className="footer-link">
                   Services
                 </Link>
               </li>
               <li style={{ marginBottom: 'var(--spacing-sm)' }}>
-                <Link to="/about" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none', transition: 'color var(--transition-fast)' }}
-                onMouseEnter={(e) => e.target.style.color = 'var(--color-secondary)'}
-                onMouseLeave={(e) => e.target.style.color = 'var(--color-text-lighter)'}
-                >
+                <Link to="/about" className="footer-link">
                   About
                 </Link>
               </li>
               <li style={{ marginBottom: 'var(--spacing-sm)' }}>
-                <Link to="/contact" style={{ color: 'var(--color-text-lighter)', textDecoration: 'none', transition: 'color var(--transition-fast)' }}
-                onMouseEnter={(e) => e.target.style.color = 'var(--color-secondary)'}
-                onMouseLeave={(e) => e.target.style.color = 'var(--color-text-lighter)'}
-                >
+                <Link to="/contact" className="footer-link">
                   Contact
                 </Link>
               </li>
@@ -94,21 +83,21 @@ function Footer() {
               fontSize: 'var(--font-size-sm)',
               marginBottom: 'var(--spacing-sm)'
             }}>
-              [ADDRESS]
+              {siteConfig.contact.address}
             </p>
             <p style={{
               color: 'var(--color-text-lighter)',
               fontSize: 'var(--font-size-sm)',
               marginBottom: 'var(--spacing-sm)'
             }}>
-              Phone: [PHONE NUMBER]
+              Phone: {siteConfig.contact.phone}
             </p>
             <p style={{
               color: 'var(--color-text-lighter)',
               fontSize: 'var(--font-size-sm)',
               marginBottom: 0
             }}>
-              Email: [EMAIL ADDRESS]
+              Email: {siteConfig.contact.email}
             </p>
           </div>
         </div>
@@ -121,7 +110,7 @@ function Footer() {
           fontSize: 'var(--font-size-sm)'
         }}>
           <p style={{ marginBottom: 0 }}>
-            © {new Date().getFullYear()} SparklePro Cleaning Services. All rights reserved.
+            © {new Date().getFullYear()} {siteConfig.businessName} Cleaning Services. All rights reserved.
           </p>
         </div>
       </div>
