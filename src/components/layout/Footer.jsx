@@ -109,6 +109,11 @@ function Footer() {
           color: 'var(--color-text-lighter)',
           fontSize: 'var(--font-size-sm)'
         }}>
+          {siteConfig.features.demoNotice && (
+            <p style={{ marginBottom: 'var(--spacing-sm)' }}>
+              Demo site for a fictional business.
+            </p>
+          )}
           <p style={{ marginBottom: 0 }}>
             © {new Date().getFullYear()} {siteConfig.businessName} Cleaning Services. All rights reserved.
           </p>

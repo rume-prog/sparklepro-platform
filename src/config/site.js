@@ -53,7 +53,8 @@ export const siteConfig = {
   features: {
     bookingForm: false,
     gallery: false,
-    pricingTable: false
+    pricingTable: false,
+    demoNotice: true // Show "Demo site for a fictional business" in footer - set to false for real client sites
   },
 
   // About page content

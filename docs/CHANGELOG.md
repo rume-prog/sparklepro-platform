@@ -35,6 +35,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Contact page phone and WhatsApp links now disabled when placeholder values are used (built, not yet verified)
 
 ### Added
+- Netlify deployment preparation: public/_redirects for client-side routing (built, not yet deployed)
+- Netlify deployment preparation: noindex meta tag in index.html to prevent search engine indexing (built, not yet deployed)
+- Netlify deployment preparation: demo notice in footer controlled by demoNotice feature flag (built, not yet deployed)
+- Netlify deployment preparation: verified production build with npm run build (built, not yet deployed)
+
+### Added
 - React + Vite project with JavaScript (built, not yet verified)
 - React Router for navigation between pages (built, not yet verified)
 - Vitest with jsdom environment for testing (built, not yet verified)

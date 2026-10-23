@@ -20,10 +20,10 @@ npm run dev
 ```
 Open http://localhost:5173 in browser.
 
-## Phase 1 Deployment - Netlify (Planned)
+## Phase 1 Deployment - Netlify (Built, not yet deployed)
 
 ### Deployment Steps
-1. Build: `npm run build`
+1. Build: `npm run build` (tested successfully - built in 1.21s)
 2. Create Netlify account
 3. Connect GitHub repository to Netlify
 4. Configure build settings:
@@ -33,6 +33,18 @@ Open http://localhost:5173 in browser.
 5. Deploy site (Netlify provides URL)
 6. Verify deployment works
 7. Optional: Configure custom domain in Netlify and update DNS at registrar
+
+### Demo Deployment Preparation (Built, not yet deployed)
+The following changes were made to prepare the site for demo deployment on Netlify:
+
+1. **Created `public/_redirects`** - Contains `/* /index.html 200` to handle client-side routing on Netlify
+2. **Added noindex meta tag to `index.html`** - `<meta name="robots" content="noindex, nofollow">` to prevent search engines from indexing the demo
+3. **Added demo notice to footer** - "Demo site for a fictional business." displayed in footer, controlled by `siteConfig.features.demoNotice` flag in `src/config/site.js` (set to `true` for demo, `false` for real client sites)
+4. **Verified build** - `npm run build` completed successfully with no errors or warnings:
+   - `dist/index.html` (0.85 kB)
+   - `dist/assets/index-BDavJWoo.css` (7.42 kB)
+   - `dist/assets/index-vLvU9L8X.js` (279.38 kB)
+   - `dist/_redirects` confirmed present in build output
 
 ## Client Domain Migration (Planned)
 
