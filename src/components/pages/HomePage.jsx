@@ -1,12 +1,29 @@
 import { Link } from 'react-router-dom';
 import '../../styles/global.css';
 import { siteConfig } from '../../config/site';
+import PricingSection from '../sections/PricingSection';
+import FAQSection from '../sections/FAQSection';
+import HowItWorksSection from '../sections/HowItWorksSection';
+import AreasServedSection from '../sections/AreasServedSection';
+import LogoStrip from '../sections/LogoStrip';
+import ReviewsSection from '../sections/ReviewsSection';
+import ServicesCards from '../sections/ServicesCards';
 
 function HomePage() {
   return (
     <div>
       {/* Hero Section */}
       <section className="hero-section">
+        {siteConfig.heroImage && (
+          <img
+            src={siteConfig.heroImage.src}
+            alt={siteConfig.heroImage.alt}
+            className="hero-background-image"
+            width="1920"
+            height="1080"
+          />
+        )}
+        <div className="hero-overlay"></div>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <h1 className="hero-title">
             {siteConfig.tagline}
@@ -23,40 +40,22 @@ function HomePage() {
             </Link>
           </div>
         </div>
-
-        {/* Decorative SVG Pattern */}
-        <svg
-          className="hero-pattern"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="80" cy="20" r="15" fill="white" />
-          <circle cx="90" cy="50" r="10" fill="white" />
-          <circle cx="70" cy="70" r="20" fill="white" />
-        </svg>
       </section>
 
-      {/* Services Preview */}
-      <section className="section-alt">
-        <div className="container">
-          <h2 className="section-title">
-            Our Services
-          </h2>
-          <div className="grid-auto-fit">
-            {siteConfig.services.slice(0, 3).map((service) => (
-              <div key={service.name} className="card">
-                <h3 className="card-title">{service.name}</h3>
-                <p>{service.description.split('.')[0]}.</p>
-              </div>
-            ))}
-          </div>
-          <div style={{ textAlign: 'center', marginTop: 'var(--spacing-xl)' }}>
-            <Link to="/services" className="link-arrow">
-              View All Services →
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Logo Strip */}
+      <LogoStrip />
+
+      {/* How It Works */}
+      <HowItWorksSection />
+
+      {/* Services */}
+      <ServicesCards />
+
+      {/* Reviews */}
+      <ReviewsSection />
+
+      {/* Pricing */}
+      <PricingSection />
 
       {/* Why Choose Us */}
       <section className="section">
@@ -74,6 +73,12 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Areas Served */}
+      <AreasServedSection />
+
+      {/* FAQ */}
+      <FAQSection />
 
       {/* CTA Section */}
       <section className="section-primary">

@@ -60,6 +60,13 @@
 | TC-18 | Quick contact WhatsApp button disabled when WhatsApp number is placeholder | Button is disabled when number starts with '[' | Passed (automated) |
 | TC-19 | Phone link disabled when phone number is placeholder | No clickable link when phone starts with '[' | Passed (automated) |
 | TC-20 | Call button disabled when phone number is placeholder | Button is disabled when phone starts with '[' | Passed (automated) |
+| TC-21 | FAQ accordion toggles on click | FAQ item expands and collapses when button clicked | Passed (automated) |
+| TC-22 | FAQ accordion is keyboard accessible | FAQ button is focusable and can be activated with Space key | Passed (automated) |
+| TC-23 | FAQ accordion has correct ARIA attributes | Button has aria-expanded, aria-controls; region has role and aria-hidden | Passed (automated) |
+| TC-24 | Service detail page renders for valid slug | Service name, description, and price display correctly | Passed (automated) |
+| TC-25 | Service detail page shows not found for invalid slug | Error message displays when service does not exist | Passed (automated) |
+| TC-26 | Service detail page links back to services | Back link navigates to /services | Passed (automated) |
+| TC-27 | Service detail page links to contact page | Request a Quote button navigates to /contact | Passed (automated) |
 
 ## Test Results
 
